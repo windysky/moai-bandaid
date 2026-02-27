@@ -1,4 +1,4 @@
-# moai-fixer
+# moai-bandaid
 
 Utility scripts for managing MoAI-ADK configuration and cleanup.
 
@@ -59,6 +59,8 @@ Configuration fix utility for MoAI-ADK that addresses:
 
 - **GitHub #437**: Changes Haiku model from `glm-4.7-flashx`/`glm-4.5-air` to `glm-4.7-flash`
 - **GitHub #448**: Patches session-end hook to preserve GLM env vars in persistent mode
+
+**Why `glm-4.7-flash` over `glm-4.5-air`:** While `glm-4.5-air` may have faster response times, `glm-4.7-flash` delivers better performance on coding plan benchmarks. See [Reddit discussion](https://www.reddit.com/r/ZaiGLM/comments/1r7kole/45_air_is_faster_than_47_flash/) for context.
 
 **Usage:**
 
