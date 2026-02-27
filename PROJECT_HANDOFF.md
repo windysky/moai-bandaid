@@ -8,7 +8,7 @@
 - `cleanup_moai.sh` - Removes MoAI-related artifacts under `~/PROJECTS`
 - `fix_moai.sh` - Fixes MoAI-ADK configuration issues (GitHub #437, #448)
 
-**Last updated:** 2026-02-27 12:30
+**Last updated:** 2026-02-27 14:00
 **Last coding CLI used:** Claude Code CLI (GLM)
 
 ---
@@ -74,4 +74,9 @@ If changes are needed:
 3. Modify script as needed
 4. Test with `--dry-run` first
 
-**Last updated:** 2026-02-27 12:30
+**Recent Changes (2026-02-27 14:00):**
+- Renamed project from moai-fixer to moai-bandaid
+- Added Reddit reference for model choice rationale
+- GitHub repo: https://github.com/windysky/moai-bandaid
+
+**Last updated:** 2026-02-27 14:00

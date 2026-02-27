@@ -2,6 +2,37 @@
 
 ---
 
+## Session 2026-02-27 14:00
+
+**Coding CLI used:** Claude Code CLI (GLM)
+
+**Phase(s) worked on:**
+- Project rename from moai-fixer to moai-bandaid
+- README documentation update with model choice rationale
+
+**Concrete changes implemented:**
+1. Renamed GitHub repository from windysky/moai-fixer to windysky/moai-bandaid
+2. Updated git remote URL to new repository name
+3. Renamed local directory from moai-fixer to moai-bandaid
+4. Added Reddit reference to README.md explaining glm-4.7-flash vs glm-4.5-air choice
+5. Committed and pushed all changes
+
+**Files/modules/functions touched:**
+- `README.md` - Added model choice rationale with Reddit link
+- GitHub repo - Renamed to moai-bandaid
+- Git remote - Updated to https://github.com/windysky/moai-bandaid.git
+
+**Key technical decisions and rationale:**
+1. **Why "bandaid" over "fixer":** Better reflects the temporary workaround nature of these scripts rather than permanent fixes
+2. **Why glm-4.7-flash over glm-4.5-air:** While glm-4.5-air may be faster, glm-4.7-flash performs better on coding plan benchmarks (per Reddit discussion)
+
+**Verification performed:**
+- grep verified no "moai-fixer" references remain in codebase
+- Git push successful to new repository URL
+- GitHub repo view confirmed new name
+
+---
+
 ## Session 2026-02-27 11:00
 
 **Coding CLI used:** Claude Code CLI (GLM)
