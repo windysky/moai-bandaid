@@ -89,12 +89,19 @@ Configuration fix utility for MoAI-ADK that addresses:
 - `--models`: Fix model configuration (llm.yaml, glm.md)
 - `--hook`: Fix session-end hook to preserve GLM env vars
 - `--all`: Apply all fixes (default if no flags specified)
-- `--global`: Apply hook fix to all projects under `~/PROJECTS`
+- `--global`: Apply to global config and all projects under `~/PROJECTS`
 - `--dry-run`: Show changes without applying them
 - `--restore`: Restore from backup (`.bak` files)
 - `--undo`: Reverse all changes (restore original files)
 - `--quiet`: Suppress output except errors
 - `--help`: Show usage
+
+**Scope Behavior:**
+
+| Flag | Project Files | Global Config |
+|------|---------------|---------------|
+| (default) | Current project only | No |
+| `--global` | All projects | Yes |
 
 **Files Modified:**
 
@@ -125,3 +132,4 @@ Configuration fix utility for MoAI-ADK that addresses:
 ### fix_moai.sh History
 - `2026-02-27`: Initial script created (addresses GitHub #437, #448).
 - `2026-02-27`: Added `--undo` functionality.
+- `2026-02-27`: Changed `--global` to control global config modification (global llm.yaml only modified with `--global`).

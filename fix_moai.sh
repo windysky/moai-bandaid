@@ -86,7 +86,7 @@ Options:
   --models           Fix model configuration (llm.yaml, glm.md)
   --hook             Fix session-end hook to preserve GLM env vars
   --all              Apply all fixes (default if no flags specified)
-  --global           Apply hook fix to all projects under ~/PROJECTS
+  --global           Apply to global config and all projects under ~/PROJECTS
   --dry-run          Show changes without applying them
   --restore          Restore from backup (.bak files)
   --undo             Reverse all changes (restore original files)
@@ -490,8 +490,10 @@ main() {
     if [[ "$DO_MODELS" -eq 1 ]]; then
         log_info "Fixing model configuration..."
 
-        # Global LLM YAML
-        fix_global_llm_yaml
+        # Global LLM YAML (only with --global flag)
+        if [[ "$DO_GLOBAL" -eq 1 ]]; then
+            fix_global_llm_yaml
+        fi
 
         # Project LLM YAML
         fix_project_llm_yaml "$SCRIPT_DIR"
